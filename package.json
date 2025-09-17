@@ -1,0 +1,22 @@
+{
+  "name": "prime-automations-ltd",
+  "version": "1.0.0",
+  "description": "Prime Automations Ltd - Industrial Automation Solutions",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost --entry-file=index.html",
+    "build-css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css",
+    "watch-css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch",
+    "dev-full": "npm run build-css && npm run watch-css & npm run dev",
+    "build": "npm run build-css"
+  },
+  "keywords": ["automation", "manufacturing", "industrial", "rmg", "textile"],
+  "author": "Prime Automations Ltd",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0",
+    "live-server": "^1.2.2"
+  }
+}

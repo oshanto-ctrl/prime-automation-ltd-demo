@@ -1,0 +1,95 @@
+/* Animation Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp 0.8s ease-out;
+}
+
+/* ==========================================================================
+   NAVBAR ANIMATIONS
+   ========================================================================== */
+
+/* Hamburger Menu Animation */
+.menu-icon-animate {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon-animate.rotate {
+    transform: rotate(90deg);
+}
+
+/* Navbar Background Animation */
+.navbar-bg-animate {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Link Hover Effect */
+.nav-link-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #006B54, #00A859);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link-hover:hover::after {
+    width: 100%;
+}
+
+/* Pulse Animation for Active Items */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.nav-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Glow Effect */
+.nav-glow {
+    box-shadow: 0 0 20px rgba(0, 168, 89, 0.3);
+}
+
+.nav-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 168, 89, 0.5);
+}

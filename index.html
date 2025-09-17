@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prime Automations Ltd - Leading provider of industrial automation solutions for RMG, Textile, and manufacturing industries">
+    <meta name="keywords" content="automation, industrial automation, RMG automation, textile automation, manufacturing solutions">
+    <meta name="author" content="Prime Automations Ltd">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prime Automations Ltd - Industrial Automation Solutions">
+    <meta property="og:description" content="Revolutionizing manufacturing with cutting-edge automation technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primeautomations.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prime Automations Ltd">
+    <meta name="twitter:description" content="Industrial automation solutions for modern manufacturing">
+    
+    <title>Prime Automations Ltd - Industrial Automation Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/icons/favicon.svg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/partners-carousel.css">
+    <!-- <link rel="stylesheet" href="/assets/css/image-gallery.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/news-event.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/contact-form.css"> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/90 backdrop-blur-md shadow-lg">
+        <!-- Navbar content will be loaded from components/navbar.html -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden font-poppins bg-gradient-to-br from-deep-sea-green/5 via-light to-green/5 min-h-screen flex items-center pt-8">
+        <!-- Hero content will be loaded from components/hero-section.html -->
+    </section>
+
+    <!-- Reliability & Quality Section -->
+    <section id="reliability" class="py-12 bg-white relative overflow-hidden">
+        <!-- Reliability content will be loaded from components/reliability-section.html -->
+    </section>
+
+    <!-- By Numbers Section -->
+    <section id="stats" class="py-12 bg-gradient-to-br from-deep-sea-green/5 to-green/5 relative overflow-hidden">
+        <!-- Stats content will be loaded from components/stats-section.html -->
+    </section>
+    
+    <!-- Our Products Section -->
+    <section id="products" class="py-12 bg-gradient-to-br from-deep-sea-green/5 to-green/5 relative overflow-hidden">
+        <!-- Products content will be loaded from components/products-section.html -->
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section id="partners" class="py-12 bg-white relative overflow-hidden">
+        <!-- Partners content will be loaded from components/partners-section.html -->
+    </section>
+
+    <!-- Changeable Image Gallery -->
+    <!-- <section id="gallery" class="py-12 bg-white relative overflow-hidden"> -->
+        <!-- Gallery content will be loaded from components/image-gallery.html -->
+    <!-- </section> -->
+
+    <!-- Event Section -->
+    <section id="events" class="py-12 bg-gradient-to-br from-green/5 to-deep-sea-green/5 relative overflow-hidden">
+        <!-- Updates content will be loaded from components/updates-carousel.html -->
+    </section>
+
+    <!-- News Section-->
+    <section id="news" class="py-12 bg-gradient-to-br from-green/5 to-deep-sea-green/5 relative overflow-hidden">
+        <!-- Updates content will be loaded from components/updates-carousel.html -->
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-12 bg-white relative overflow-hidden">
+        <!-- Contact form content will be loaded from components/contact-form.html -->
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-deep-sea-green text-white relative overflow-hidden">
+        <!-- Footer content will be loaded from components/footer.html -->
+    </footer>
+
+
+        <!-- JavaScript -->
+        <script src="/assets/js/component-loader.js"></script>
+        <script src="/assets/js/navbar.js"></script>
+        <script src="/assets/js/carousel.js"></script>
+        <script src="/assets/js/form-validation.js"></script>
+        <script src="/assets/js/scroll-animations.js"></script>
+        <script src="/assets/js/stats-animation.js"></script> <!-- Add this line -->
+        <script src="/assets//js/product-filter.js"></script>
+        <script src="/assets/js/partners-carousel.js"></script>
+        <script src="/assets/js/news-event.js"></script>
+        <script src="/assets/js/contact-form.js"></script>
+        <!-- <script src="/assets/js/image-gallery.js"></script> -->
+        <script src="/assets/js/main.js"></script>
+    
+    <!-- Initialize components -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load all components using the component loader
+            // Later addition: { id: 'gallery', url: '/components/image-gallery.html' },
+            const components = [
+                { id: 'navbar', url: '/components/navbar.html' },
+                { id: 'hero', url: '/components/hero-section.html' },
+                { id: 'reliability', url: '/components/reliability-section.html' },
+                { id: 'stats', url: '/components/stats-section.html' },
+                { id: 'partners', url: '/components/partners-section.html' },
+                { id: 'products', url: '/components/products-section.html' },
+                { id: 'events', url: '/components/events-section.html'},
+                {id: 'news', url: '/components/news-section.html'},
+                { id: 'contact', url: '/components/contact-form.html' },
+                { id: 'footer', url: '/components/footer.html' }
+            ];
+
+            // Load all components
+            // components.forEach(component => {
+            //     window.componentLoader.loadComponent(component.id, component.url);
+            // });
+            (async () => {
+                for (const component of components) {
+                    await window.componentLoader.loadComponent(component.id, component.url)
+                }
+
+                // After all components are loaded, initialize functionalities
+                initializeMobileMenu();
+                initializeSmoothScroll();
+                initializeScrollEffects();
+                initializeFormHandlers();
+            })();
+
+
+            // Initialize additional functionality after components are loaded
+            setTimeout(() => {
+                // Initialize mobile menu
+                initializeMobileMenu();
+                
+                // Initialize smooth scrolling
+                initializeSmoothScroll();
+                
+                // Initialize scroll effects
+                initializeScrollEffects();
+                
+                // Initialize form handlers
+                initializeFormHandlers();
+            }, 1000);
+        });
+
+        function initializeMobileMenu() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    if (menuIcon) {
+                        if (mobileMenu.classList.contains('hidden')) {
+                            menuIcon.classList.remove('fa-times');
+                            menuIcon.classList.add('fa-bars');
+                        } else {
+                            menuIcon.classList.remove('fa-bars');
+                            menuIcon.classList.add('fa-times');
+                        }
+                    }
+                });
+            }
+        }
+
+        function initializeSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            const menuIcon = document.getElementById('menu-icon');
+                            if (menuIcon) {
+                                menuIcon.classList.remove('fa-times');
+                                menuIcon.classList.add('fa-bars');
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        function initializeScrollEffects() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+
+            // Initialize scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in-up');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        }
+
+        function initializeFormHandlers() {
+            // Contact form handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    const successMessage = document.getElementById('successMessage');
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                    submitBtn.disabled = true;
+
+                    setTimeout(() => {
+                        contactForm.reset();
+                        contactForm.style.display = 'none';
+                        if (successMessage) {
+                            successMessage.classList.remove('hidden');
+                        }
+                        
+                        setTimeout(() => {
+                            contactForm.style.display = 'block';
+                            if (successMessage) {
+                                successMessage.classList.add('hidden');
+                            }
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                        }, 5000);
+                    }, 2000);
+                });
+            }
+
+            // Newsletter form handler
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
+                    submitBtn.disabled = true;
+
+                    setTimeout(() => {
+                        newsletterForm.reset();
+                        submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Subscribed!';
+                        
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                        }, 2000);
+                    }, 1500);
+                });
+            }
+        }
+
+        // Global function for component loading
+        function loadComponent(id, url) {
+            return window.componentLoader.loadComponent(id, url);
+        }
+
+        // Make functions global for component access
+        window.loadComponent = loadComponent;
+        window.initializeMobileMenu = initializeMobileMenu;
+        window.initializeSmoothScroll = initializeSmoothScroll;
+        window.initializeScrollEffects = initializeScrollEffects;
+        window.initializeFormHandlers = initializeFormHandlers;
+    </script>
+</body>
+</html>

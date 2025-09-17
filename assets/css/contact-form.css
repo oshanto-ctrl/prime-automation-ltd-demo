@@ -1,0 +1,224 @@
+/* Custom Colors */
+:root {
+    --deep-sea-green: #065f46;
+    --green: #10b981;
+    --green-600: #059669;
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, var(--deep-sea-green), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Background Grid Pattern */
+.bg-grid {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Form Input Styles */
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(6, 95, 70, 0.1);
+}
+
+/* Error States */
+.border-red-500 {
+    border-color: #ef4444 !important;
+}
+
+.text-red-500 {
+    color: #ef4445;
+}
+
+/* Success and Error Messages */
+#successMessage, #errorMessage {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Effect */
+button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+button[type="submit"]:hover::before {
+    left: 100%;
+}
+
+/* Contact Card Gradient Enhancements */
+.bg-gradient-to-br.from-deep-sea-green.to-green\/80 {
+    background: linear-gradient(to bottom right, var(--deep-sea-green), rgba(16, 185, 129, 0.8));
+}
+
+.bg-gradient-to-br.from-green\/80.to-deep-sea-green {
+    background: linear-gradient(to bottom right, rgba(16, 185, 129, 0.8), var(--deep-sea-green));
+}
+
+.bg-gradient-to-br.from-deep-sea-green\/90.to-green {
+    background: linear-gradient(to bottom right, rgba(6, 95, 70, 0.9), var(--green));
+}
+
+/* Social Media Icon Hover Effects */
+a[class*="rounded-full"] {
+    position: relative;
+    overflow: hidden;
+}
+
+a[class*="rounded-full"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+a[class*="rounded-full"]:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-cols-1.lg\:grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .p-8.lg\:p-12 {
+        padding: 1.5rem;
+    }
+    
+    .text-4xl.md\:text-5xl {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .p-8 {
+        padding: 1rem;
+    }
+    
+    .text-lg {
+        font-size: 1rem;
+    }
+    
+    .w-12.h-12 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* Accessibility */
+input:focus, textarea:focus, button:focus, a:focus {
+    outline: 2px solid var(--deep-sea-green);
+    outline-offset: 2px;
+}
+
+/* Loading Spinner Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Custom Checkbox Styling */
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--deep-sea-green);
+    border-color: var(--deep-sea-green);
+}
+
+input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 0.2rem;
+    left: 0.4rem;
+    width: 0.35rem;
+    height: 0.65rem;
+    border: solid white;
+    border-width: 0 0.15rem 0.15rem 0;
+    transform: rotate(45deg);
+}
+
+/* Form Field Animations */
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    transform: translateY(-2px);
+}
+
+/* Card Hover Effects */
+.transform.hover\:-translate-y-2 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Link Hover Effects */
+a[href^="tel:"], a[href^="mailto:"] {
+    position: relative;
+    text-decoration: none;
+}
+
+a[href^="tel:"]::after, a[href^="mailto:"]::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+a[href^="tel:"]:hover::after, a[href^="mailto:"]:hover::after {
+    width: 100%;
+}

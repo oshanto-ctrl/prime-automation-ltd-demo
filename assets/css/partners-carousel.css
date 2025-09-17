@@ -1,0 +1,70 @@
+/* Partners Carousel Styles */
+.partners-carousel {
+    display: flex;
+    width: max-content;              /* make track width fit its content */
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+}
+
+.partners-carousel:hover {
+    animation-play-state: paused;
+}
+
+.partner-track {
+    display: flex;
+    flex-shrink: 0;                  /* prevent collapsing */
+    align-items: center;
+    padding: 2rem 0;                 /* py-8 equivalent */
+    gap: 3rem;                       /* space-x-12 equivalent */
+}
+
+.partner-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* shift exactly one track width */
+    }
+}
+
+/* Focus styles for accessibility */
+.partner-logo:focus {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .partners-carousel {
+        animation: none;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #10b981 #f3f4f6;
+    }
+    
+    .partners-carousel::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    .partners-carousel::-webkit-scrollbar-track {
+        background: #f3f4f6;
+    }
+    
+    .partners-carousel::-webkit-scrollbar-thumb {
+        background-color: #10b981;
+        border-radius: 4px;
+    }
+}

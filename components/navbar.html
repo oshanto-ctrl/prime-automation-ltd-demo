@@ -1,0 +1,93 @@
+<nav id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-gradient-to-br from-deep-sea-green to-green rounded-xl flex items-center justify-center transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 shadow-lg">
+                        <!-- <i class="fas fa-cogs text-white text-2xl"></i> -->
+                         <img src="/assets/images/icons/pal-logo-nav.svg" alt="Prime Automations Logo">
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold text-deep-sea-green block leading-tight tracking-tight">Prime</span>
+                        <span class="text-sm font-semibold text-green block leading-tight tracking-wide">Automations</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-center space-x-2">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle mr-2"></i>About Us
+                    </a>
+                    <a href="products.html" class="nav-link">
+                        <i class="fas fa-box mr-2"></i>Products
+                    </a>
+                    <a href="blogs.html" class="nav-link">
+                        <i class="fas fa-blog mr-2"></i>Blogs
+                    </a>
+                    
+                    <!-- Dropdown Menu -->
+                    <div class="relative group">
+                        <button class="nav-link dropdown-btn">
+                            <i class="fas fa-ellipsis-h mr-2"></i>More
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-500 group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform group-hover:translate-y-0 translate-y-4 z-10">
+                            <div class="py-2">
+                                <a href="news.html" class="dropdown-item">
+                                    <i class="fas fa-newspaper mr-3 text-deep-sea-green"></i>News
+                                </a>
+                                <a href="events.html" class="dropdown-item">
+                                    <i class="fas fa-calendar-alt mr-3 text-green"></i>Events
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="nav-cta">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-deep-sea-green hover:text-green focus:outline-none focus:text-green transition-colors duration-500 p-2 rounded-xl hover:bg-deep-sea-green/10">
+                    <i class="fas fa-bars text-xl transition-transform duration-500" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="mobile-nav-link active">
+                <i class="fas fa-home mr-3"></i>Home
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-info-circle mr-3"></i>About Us
+            </a>
+            <a href="products.html" class="mobile-nav-link">
+                <i class="fas fa-box mr-3"></i>Products
+            </a>
+            <a href="blogs.html" class="mobile-nav-link">
+                <i class="fas fa-blog mr-3"></i>Blogs
+            </a>
+            <a href="news.html" class="mobile-nav-link">
+                <i class="fas fa-newspaper mr-3"></i>News
+            </a>
+            <a href="events.html" class="mobile-nav-link">
+                <i class="fas fa-calendar-alt mr-3"></i>Events
+            </a>
+            <a href="contact.html" class="mobile-nav-cta">
+                <i class="fas fa-envelope mr-3"></i>Contact Us
+            </a>
+        </div>
+    </div>
+</nav>
