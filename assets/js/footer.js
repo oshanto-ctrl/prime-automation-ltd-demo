@@ -1,0 +1,1 @@
+// All footer related JavaScript can go here
