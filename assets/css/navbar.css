@@ -1,0 +1,78 @@
+/* Navbar Styles */
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .nav-link {
+        @apply px-4 py-2 text-sm font-medium text-gray-700 hover:text-deep-sea-green hover:bg-gray-50 rounded-lg transition-all duration-200;
+    }
+    
+    .nav-link.active {
+        @apply text-deep-sea-green bg-deep-sea-green/10 font-semibold;
+    }
+    
+    .nav-cta {
+        @apply px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-deep-sea-green to-green rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200;
+    }
+    
+    .dropdown-item {
+        @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-deep-sea-green transition-colors duration-200;
+    }
+    
+    .navbar-scrolled {
+        @apply shadow-lg bg-white/95 backdrop-blur-sm;
+    }
+    
+    .navbar-bg-animate {
+        animation: navbarBgSlide 0.3s ease-out;
+    }
+    
+    @keyframes navbarBgSlide {
+        from {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        to {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+    }
+    
+    .nav-glow {
+        @apply shadow-lg shadow-deep-sea-green/20;
+    }
+    
+    .nav-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: .8;
+        }
+    }
+    
+    .rotate {
+        transform: rotate(90deg);
+    }
+    
+    .menu-icon-animate {
+        animation: menuIconRotate 0.3s ease-in-out;
+    }
+    
+    @keyframes menuIconRotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(90deg);
+        }
+    }

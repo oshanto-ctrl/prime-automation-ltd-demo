@@ -7,32 +7,38 @@ function initializeNavbar() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
-    
+
     // Mobile menu toggle
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
+if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+        // Toggle the slide animation
+        mobileMenu.classList.toggle('-translate-x-full');
+        
+        // Animate menu icon
+        if (menuIcon) {
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+            menuIcon.classList.toggle('rotate');
             
-            // Animate menu icon
-            if (menuIcon) {
-                menuIcon.classList.toggle('fa-bars');
-                menuIcon.classList.toggle('fa-times');
-                menuIcon.classList.toggle('rotate');
-                
-                // Add animation class
-                menuIcon.classList.add('menu-icon-animate');
-            }
+            // Add animation class
+            menuIcon.classList.add('menu-icon-animate');
             
-            // Add stagger animation to mobile menu items
-            if (!mobileMenu.classList.contains('hidden')) {
-                const mobileItems = mobileMenu.querySelectorAll('.mobile-nav-item, .mobile-nav-cta');
-                mobileItems.forEach((item, index) => {
-                    item.style.animationDelay = `${index * 0.1}s`;
-                    item.style.animation = 'slideInLeft 0.4s ease-out forwards';
-                });
-            }
-        });
-    }
+            // Remove animation class after animation completes
+            setTimeout(() => {
+                menuIcon.classList.remove('menu-icon-animate');
+            }, 300);
+        }
+        
+        // Add stagger animation to mobile menu items
+        if (!mobileMenu.classList.contains('-translate-x-full')) {
+            const mobileItems = mobileMenu.querySelectorAll('.mobile-nav-link');
+            mobileItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.style.animation = 'slideInLeft 0.4s ease-out forwards';
+            });
+        }
+    });
+}
 
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
@@ -47,7 +53,7 @@ function initializeNavbar() {
 
     // Active navigation link
     const currentLocation = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-item, .mobile-nav-item');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
     
     navLinks.forEach(link => {
         const linkHref = link.getAttribute('href');
@@ -63,19 +69,22 @@ function initializeNavbar() {
     });
 
     // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (navbar && !navbar.contains(event.target) && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
+document.addEventListener('click', function(event) {
+    if (navbar && mobileMenu && !mobileMenu.classList.contains('-translate-x-full')) {
+        // Check if the click is outside the navbar and mobile menu
+        if (!navbar.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.add('-translate-x-full');
             if (menuIcon) {
                 menuIcon.classList.add('fa-bars');
                 menuIcon.classList.remove('fa-times');
                 menuIcon.classList.remove('rotate');
             }
         }
-    });
+    }
+});
 
     // Add hover effect enhancement
-    const navItems = document.querySelectorAll('.nav-item, .dropdown-btn, .nav-cta');
+    const navItems = document.querySelectorAll('.nav-link, .dropdown-btn, .nav-cta');
     navItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
             this.classList.add('nav-glow');
@@ -110,10 +119,26 @@ function initializeNavbar() {
         });
     });
 
-    // Add keyboard navigation
-    navbar.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+   // Add keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('-translate-x-full')) {
+        mobileMenu.classList.add('-translate-x-full');
+        if (menuIcon) {
+            menuIcon.classList.add('fa-bars');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.remove('rotate');
+        }
+    }
+});
+
+
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            // Close mobile menu if switching to desktop view
+            if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
                 if (menuIcon) {
                     menuIcon.classList.add('fa-bars');
@@ -121,7 +146,7 @@ function initializeNavbar() {
                     menuIcon.classList.remove('rotate');
                 }
             }
-        }
+        }, 250);
     });
 }
 
