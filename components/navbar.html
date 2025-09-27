@@ -16,27 +16,28 @@
 
             <!-- Desktop Navigation -->
             <div class="hidden md:block">
-                <div class="ml-10 flex items-center space-x-6">
-                    <a href="index.html" class="nav-link text-green-600 font-bold text-lg px-3 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-extrabold hover:scale-110 active:scale-105">Home</a>
-                    <a href="about.html" class="nav-link text-green-600 font-bold text-lg px-3 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-extrabold hover:scale-110 active:scale-105">About Us</a>
-                    <a href="products.html" class="nav-link text-green-600 font-bold text-lg px-3 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-extrabold hover:scale-110 active:scale-105">Products</a>
+                <div class="ml-10 flex items-center space-x-2">
+                    <a href="index.html" class="nav-link text-green font-semibold text-lg px-2 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-bold hover:scale-105 active:scale-110">Home</a>
+                    <a href="/pages/about.html" class="nav-link text-green font-semibold text-lg px-2 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-bold hover:scale-105 active:scale-110">About Us</a>
+                    <a href="/pages/products.html" class="nav-link text-green font-semibold text-lg px-2 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-bold hover:scale-105 active:scale-110">Products</a>
                     <!-- Highlights Dropdown -->
                     <div class="relative group">
-                        <button class="nav-link dropdown-btn flex items-center text-green-600 font-bold text-lg px-3 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-extrabold group-hover:scale-110">
+                        <button class="nav-link dropdown-btn flex items-center text-green font-semibold text-lg px-2 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-bold group-hover:scale-110">
                             Highlights
-                            <svg class="ml-2 w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 20 20">
+                            <!-- Down arrow Icon -->
+                            <svg class="ml-2 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 20 20">
                                 <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.12.996l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z" fill="currentColor"/>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-10">
+                        <div class="absolute left-0 mt-2.5 w-48 bg-deep-sea-green/5 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-10">
                             <div class="py-3 space-y-2">
-                                <a href="events.html" class="dropdown-item block px-4 py-2 text-green-600 font-bold text-lg transition-all duration-200 hover:bg-green-50 hover:text-deep-sea-green hover:font-extrabold hover:translate-x-2">Event</a>
-                                <a href="news.html" class="dropdown-item block px-4 py-2 text-green-600 font-bold text-lg transition-all duration-200 hover:bg-green-50 hover:text-deep-sea-green hover:font-extrabold hover:translate-x-2">News</a>
+                                <a href="/pages/events.html" class="dropdown-item block px-4 py-2 text-green font-semibold text-lg transition-all duration-300 hover:text-deep-sea-green hover:font-bold hover:translate-x-2">Event</a>
+                                <a href="/pages/news.html" class="dropdown-item block px-4 py-2 text-green font-semibold text-lg transition-all duration-300 hover:text-deep-sea-green hover:font-bold hover:translate-x-2">News</a>
                             </div>
                         </div>
                     </div>
-                    <a href="blogs.html" class="nav-link text-green-600 font-bold text-lg px-3 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-extrabold hover:scale-110 active:scale-105">Blogs</a>
-                    <a href="contact.html" class="nav-cta bg-green-600 text-white font-bold text-lg px-6 py-2 rounded-lg transition-all duration-300 hover:bg-deep-sea-green hover:font-extrabold hover:scale-105 hover:shadow-lg active:scale-100">Contact</a>
+                    <a href="/pages/blogs.html" class="nav-link text-green font-semibold text-lg px-2 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-bold hover:scale-105 active:scale-110">Blogs</a>
+                    <a href="/pages/contact.html" class="nav-link text-green font-semibold text-lg px-2 py-2 transition-all duration-300 hover:text-deep-sea-green hover:font-bold hover:scale-110  active:scale-105">Contact</a>
                 </div>
             </div>
 
@@ -51,7 +52,8 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="md:hidden hidden bg-green/20 border-t border-gray-200">
-        <div class="px-2 pt-2 pb-3 space-y-1 ">
+        <!-- All Items Of Navbar -->
+        <div class="px-2 pt-2 pb-3 space-y-1">
             <a href="index.html" class="mobile-nav-link active flex items-center justify-center px-4 py-3 text-base font-extrabold  text-deep-sea-green">
                 
                 Home
@@ -82,6 +84,15 @@
                 Contact Us
             </a>
         </div>
+
+        <!-- An Image of PAL with a single line company motto -->
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <span class="items-center justify-center text-black font-semibold italic">
+                <img src="/assets/images/icons/favicon.svg" class="w-6 h-6" alt="PAL"> We Trust We Build We Innovate 
+            </span>
+            
+        </div>
+
     </div>
     
 </div>
