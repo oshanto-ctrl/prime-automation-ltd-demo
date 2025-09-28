@@ -86,3 +86,6 @@ public
 # Temporary folders
 tmp/
 temp/
+
+# Tailwind CSS output
+assets/css/output.css
